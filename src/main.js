@@ -1,23 +1,9 @@
-import './style.css';
-import Code from './code.png'
+import Vue from 'vue'
+import App from './App.vue'
+import './style.css'
 
-function component() {
-  const element = document.createElement('div');
-  element.classList.add('hello');
-  element.innerHTML = 'Hello, webpack!'
-  return element;
-}
+Vue.config.productionTip = false
 
-function addCode() {
-  const div = document.createElement('div')
-  div.classList.add('code-image')
-
-  const myCode = new Image();
-  myCode.src = Code;
-  div.appendChild(myCode);
-
-  return div
-}
-
-document.body.appendChild(component());
-document.body.appendChild(addCode());
+new Vue({
+  render: h => h(App)
+}).$mount('#app')
