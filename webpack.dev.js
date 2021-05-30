@@ -10,16 +10,16 @@ module.exports = merge(common, {
     compress: true,
     hot: true, // 启用热更新
   },
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.((c|sa|sc)ss)$/i,
-  //       use: [
-  //         'vue-style-loader',
-  //         'css-loader',
-  //         'sass-loader'
-  //       ],
-  //     },
-  //   ]
-  // }
+  module: {
+    rules: [
+      {
+        test: /\.((c|sa|sc)ss)$/i,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
+    ]
+  }
 });
