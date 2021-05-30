@@ -9,11 +9,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    hot: true, // 启用热更新
-  },
   // 配置参考：https://webpack.docschina.org/configuration/resolve/
   resolve: {
     alias: {
@@ -49,7 +44,6 @@ module.exports = {
       },
     ]
   },
-  devtool: 'inline-source-map', // 添加报错文件映射
   plugins: [
     new HtmlWebpackPlugin({
       inject: 'body', // 配置 JS 文件引入到哪里

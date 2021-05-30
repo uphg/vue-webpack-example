@@ -1,12 +1,11 @@
 module.exports = {
   extends: [
+    'plugin:vue/recommended',  // Use this if you are using Vue.js 2.x.
     // add more generic rulesets here, such as:
-    // 'eslint:recommended',
-    'plugin:vue/recommended',
     'eslint:recommended'
-    // 'plugin:vue/recommended' // Use this if you are using Vue.js 2.x.
   ],
   rules: {
+    "vue/require-default-prop": "off", // 关闭 Vue 组件 prop 默认值检查
     'vue/max-attributes-per-line': [2, {
       'singleline': 10,
       'multiline': {
@@ -182,8 +181,7 @@ module.exports = {
     'yield-star-spacing': [2, 'both'],
     'yoda': [2, 'never'],
     'prefer-const': 2,
-    // 'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'no-debugger': 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'object-curly-spacing': [2, 'always', {
       objectsInObjects: false
     }],
