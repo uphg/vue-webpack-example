@@ -10,3 +10,4 @@
 - 自动化创建 dist 文件
 - 添加报错提示映射
 - 添加 Vue 相关 Loader
+- 添加 Vue 的 ESLint 检查

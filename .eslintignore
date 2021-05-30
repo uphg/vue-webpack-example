@@ -4,4 +4,5 @@ public
 dist
 
 package.json
-webpack.config.js
+webpack.*.js
+.eslintrc.js
