@@ -223,3 +223,11 @@ yarn lint
 # 检查并修复
 yarn lint --fix
 ```
+
+## 添加生产模式配置
+
+- 创建 `webpack.common.js` 表示开发/生产模式的公共配置
+- 创建 `webpack.prod.js` 表示开发模式的配置
+- 创建 `webpack.dev.js` 表示生产模式的配置
+
+> 通过 添加 `mode: 'development'` 属性来区分开发/生产模式，具体参考项目配置
