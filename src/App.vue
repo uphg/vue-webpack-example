@@ -8,6 +8,7 @@
       hi
     </h2>
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <button @click="clickButton">点我打招呼</button>
   </div>
 </template>
 
@@ -18,6 +19,11 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    clickButton() {
+      alert('hi')
+    }
   }
 }
 </script>

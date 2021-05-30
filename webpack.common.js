@@ -1,6 +1,7 @@
 const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -30,14 +31,30 @@ module.exports = {
       },
       // 它会应用到普通的 `.css` 文件
       // 以及 `.vue` 文件中的 `<style>` 块
-      {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader',]
-      },
-      {
-        test: /\.scss$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader']
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: ['vue-style-loader', 'css-loader',]
+      // },
+      // {
+      //   test: /\.scss$/,
+      //   use: ['vue-style-loader', 'css-loader', 'sass-loader']
+      // },
+      // {
+      //   test: /\.((c|sa|sc)ss)$/i,
+      //   use: [
+      //     process.env.NODE_ENV !== 'production' ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
+      //     'css-loader',
+      //     'sass-loader'
+      //   ],
+      // },
+      // {
+      //   test: /\.((c|sa|sc)ss)$/i,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     'css-loader',
+      //     'sass-loader'
+      //   ],
+      // },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
@@ -51,5 +68,8 @@ module.exports = {
     }),
     // 请确保引入这个插件来施展魔法
     new VueLoaderPlugin(),
+    // new MiniCssExtractPlugin({
+    //   filename: 'css/[name].css'
+    // }),
   ],
 };
