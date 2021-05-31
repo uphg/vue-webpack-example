@@ -14,6 +14,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.((c|sa|sc)ss)$/i,
+        include: path.resolve(__dirname, 'src'),
         use: [
           'vue-style-loader',
           'css-loader',

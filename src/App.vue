@@ -9,16 +9,20 @@
     </h2>
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <button @click="clickButton">点我打招呼</button>
+    <hr>
+    <Button>hi, jack</Button>
   </div>
 </template>
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
+import Button from '@/components/Button.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Button
   },
   methods: {
     clickButton() {

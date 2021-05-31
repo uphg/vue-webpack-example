@@ -19,6 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
+        include: path.resolve(__dirname, 'src'),
         loader: 'vue-loader'
       },
       // 它会应用到普通的 `.js` 文件
@@ -26,6 +27,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/
       },
       // 它会应用到普通的 `.css` 文件
@@ -56,6 +58,7 @@ module.exports = {
       // },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        include: path.resolve(__dirname, 'src'),
         type: 'asset/resource',
       },
     ]
@@ -67,8 +70,5 @@ module.exports = {
     }),
     // 请确保引入这个插件来施展魔法
     new VueLoaderPlugin(),
-    // new MiniCssExtractPlugin({
-    //   filename: 'css/[name].css'
-    // }),
   ],
 };
