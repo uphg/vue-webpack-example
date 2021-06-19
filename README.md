@@ -229,11 +229,10 @@ yarn lint --fix
 安装
 
 ```sh
+yarn add -D mini-css-extract-plugin
 ```
 
-
-
-
+配置参考示例项目
 
 ## 添加生产模式配置
 
